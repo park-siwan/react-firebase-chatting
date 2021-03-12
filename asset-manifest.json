@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-firebase-chatting/static/css/main.e5a9ed99.chunk.css",
-    "main.js": "/react-firebase-chatting/static/js/main.1a080391.chunk.js",
-    "main.js.map": "/react-firebase-chatting/static/js/main.1a080391.chunk.js.map",
+    "main.js": "/react-firebase-chatting/static/js/main.3169959b.chunk.js",
+    "main.js.map": "/react-firebase-chatting/static/js/main.3169959b.chunk.js.map",
     "runtime-main.js": "/react-firebase-chatting/static/js/runtime-main.20fdb831.js",
     "runtime-main.js.map": "/react-firebase-chatting/static/js/runtime-main.20fdb831.js.map",
     "static/js/2.64423841.chunk.js": "/react-firebase-chatting/static/js/2.64423841.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.20fdb831.js",
     "static/js/2.64423841.chunk.js",
     "static/css/main.e5a9ed99.chunk.css",
-    "static/js/main.1a080391.chunk.js"
+    "static/js/main.3169959b.chunk.js"
   ]
 }
