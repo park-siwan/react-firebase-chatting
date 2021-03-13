@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react';
 import './App.css';
+import CrossBrowser from './CrossBrowser';
 
 import firebase from 'firebase/app';
 import 'firebase/firestore';
 import 'firebase/auth';
-import 'firebase/analytics';
+// import 'firebase/analytics';
 
 import * as FaIcons from 'react-icons/fa';
 import * as FcIcons from 'react-icons/fc';
@@ -23,14 +24,16 @@ firebase.initializeApp({
 
 const auth = firebase.auth();
 const firestore = firebase.firestore();
-const analytics = firebase.analytics();
+// const analytics = firebase.analytics();
 
 function App() {
+  // Android, ios 확인
+
   const [user] = useAuthState(auth);
   return (
     <div className='App'>
       <header>
-        <h4> ⭐ 소원을 빌어주세요</h4>
+        <h4> 🙏 소원을 빌어주세요</h4>
         <SignOut />
       </header>
 
@@ -40,20 +43,27 @@ function App() {
 }
 
 function SignIn() {
+  CrossBrowser();
   const signInWithGoogle = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   };
 
   return (
-    <button className='sign-in' onClick={signInWithGoogle}>
-      <FcIcons.FcGoogle />
-      <span> </span>
+    <>
+      <button className='sign-in' onClick={signInWithGoogle}>
+        <FcIcons.FcGoogle />
+        <span> </span>
 
-      <span>
-        <b>구글로 로그인하기</b>
+        <span>
+          <b>구글로 로그인하기</b>
+        </span>
+      </button>
+      <span className='notice'>
+        🙀 아이폰(ios)은 safari, chrome <br />
+        등으로 로그인 해주세요. 🙏
       </span>
-    </button>
+    </>
   );
 }
 
@@ -61,7 +71,7 @@ function SignOut() {
   return (
     auth.currentUser && (
       <button className='sign-out' onClick={() => auth.signOut()}>
-        로그아웃
+        <b>로그아웃</b>
       </button>
     )
   );

@@ -90,6 +90,7 @@ button {
   display: inline-block;
   cursor: pointer;
   font-size: 1rem;
+  outline: none;
 }
 
 button:disabled {
@@ -105,15 +106,24 @@ button:disabled {
   padding: 15px;
   border-radius: 25px;
 }
+.notice {
+  margin-top: 20px;
+  color: #72808b;
+}
 .sign-out {
   border: none;
   color: gray;
-  padding: 5px 5px;
+  padding: 8px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.8rem;
+  border-radius: 25px;
+}
+.sign-out:hover {
+  color: rgb(255, 255, 255);
+  background: rgb(255, 85, 43);
 }
 
 ul,
